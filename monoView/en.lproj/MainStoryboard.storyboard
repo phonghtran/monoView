@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12C60" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="2">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
+    </dependencies>
+    <scenes>
+        <!--Mono View View Controller-->
+        <scene sceneID="5">
+            <objects>
+                <viewController id="2" customClass="monoViewViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3">
+                        <rect key="frame" x="0.0" y="0.0" width="568" height="320"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kho-Bg-SiA">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1590" id="FWR-ET-JkD"/>
+                                    <constraint firstAttribute="width" constant="2048" id="cle-J3-rBn"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wHV-gu-Aai">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="calibrate">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="resetRef:" destination="2" eventType="touchUpInside" id="LSw-Ug-Un4"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ral-hG-pGP">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="swap">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="swapImage:" destination="2" eventType="touchUpInside" id="MtE-jh-mIf"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" alpha="0.0" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g3K-NX-ss8">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="test">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="testButton:" destination="2" eventType="touchUpInside" id="aCX-GN-dC8"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="wHV-gu-Aai" firstAttribute="leading" secondItem="Ral-hG-pGP" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="GdT-5G-b4F"/>
+                            <constraint firstItem="kho-Bg-SiA" firstAttribute="top" secondItem="3" secondAttribute="top" constant="-795" id="Gfj-ry-Fwj"/>
+                            <constraint firstAttribute="trailing" secondItem="wHV-gu-Aai" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="MG0-8o-Mcn"/>
+                            <constraint firstItem="kho-Bg-SiA" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="-1024" id="OeN-RD-eL6"/>
+                            <constraint firstItem="g3K-NX-ss8" firstAttribute="top" secondItem="3" secondAttribute="top" constant="108" id="cBo-TH-XaR"/>
+                            <constraint firstItem="g3K-NX-ss8" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="187" id="cy5-hX-KTr"/>
+                            <constraint firstAttribute="bottom" secondItem="wHV-gu-Aai" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="j2a-0o-oK1"/>
+                            <constraint firstAttribute="bottom" secondItem="Ral-hG-pGP" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="jzt-aX-WZr"/>
+                        </constraints>
+                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    </view>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <connections>
+                        <outlet property="actionButton" destination="g3K-NX-ss8" id="93T-Sh-2cw"/>
+                        <outlet property="monoViewController" destination="3" id="pBz-Zg-nU0"/>
+                        <outlet property="targetImageView" destination="kho-Bg-SiA" id="y9D-NB-Rzc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+    <classes>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+        <class className="monoViewViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/monoViewViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="resetRef:"/>
+                <relationship kind="action" name="swapImage:"/>
+                <relationship kind="outlet" name="actionButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="monoViewController" candidateClass="UIView"/>
+                <relationship kind="outlet" name="targetImageView" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="testLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="testLabel2" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+    </classes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>
